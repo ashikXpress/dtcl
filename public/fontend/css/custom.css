@@ -1,0 +1,105 @@
+.navbar-default .navbar-nav > li > a {
+    color: #222;
+    margin: 0 13px;
+}
+.navbar-brand > img {
+    display: block;
+    margin-top: -22px;
+    width: 70px;
+   
+}
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top:-6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+.dropdown-menu {
+	margin-top: 0px;
+}
+
+.agile_short_dropdown li a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.about-carousel img {
+    max-width: 100%;
+}
+a.project-see {
+    color: #0ac876;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.choose_right h3 {
+    font-size: 1.1em;
+  
+}
+.col-md-6.choose_icon {
+    margin-bottom: 15px;
+}
+.project-table {
+    margin: 25px 0;
+}
+.w3ls_address_mail_footer_grids {
+    margin-top: 15px;
+}
+.sister-concern{
+	padding-top: 15px;
+}
+.sister-concern ul {
+    margin: 0;
+    list-style: none;
+}
+
+.sister-concern ul>li {
+    display: inline;
+    color: #e1b31a;
+
+}
+.sister-concern ul>li:first-child {
+ font-size: 18px;
+}
+.sister-concern ul>li >a {
+    color: #fff;
+    text-transform: uppercase;
+    padding-right: 19px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #222;
+    margin: 0 6px;
+    font-size: 14px;
+}
+ul.dropdown-menu.agile_short_dropdown {
+    text-align: left;
+}
+
+.client{
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    text-align: center;
+}
