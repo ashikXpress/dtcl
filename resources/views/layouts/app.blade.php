@@ -19,7 +19,7 @@
     <link href="{{asset('fontend/css/font-awesome.css')}}" rel="stylesheet">
     <link href="{{asset('fontend/css/custom.css')}}" rel="stylesheet">
     <link href="{{asset('fontend/css/index.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{ asset('plugins/lightbox2/css/lightbox.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('fontend/lightbox2/css/lightbox.min.css') }}" rel="stylesheet" />
     <!-- //font-awesome-icons -->
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,900" rel="stylesheet">
     @yield('additionalCSS')
@@ -217,7 +217,7 @@
 <!-- requried-jsfiles-for owl -->
 <script type="text/javascript" src="{{asset('fontend/js/move-top.js')}}"></script>
 <script type="text/javascript" src="{{asset('fontend/js/easing.js')}}"></script>
-<script src="{{ asset('plugins/lightbox2/js/lightbox.min.js') }}"></script>
+<script src="{{ asset('fontend/lightbox2/js/lightbox.min.js') }}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $(".scroll").click(function(event){

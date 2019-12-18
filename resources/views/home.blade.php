@@ -88,7 +88,7 @@
     <div class="banner-bottom">
         <div class="container">
 
-            <h2 class="w3l_header w3_agileits_header">We Carefully handle all <span>Projects</span> </h2>
+            <h2 class="w3l_header w3_agileits_header">Recent <span>Projects</span> </h2>
             <p class="sub_para_agile">Ipsum dolor sit amet consectetur adipisicing elit</p>
             @foreach($projects->chunk(4) as $chunk)
             <div class="agileits_banner_bottom_grids {{ $loop->first ? '' : 'two' }}">
@@ -321,7 +321,7 @@
     <!-- agile_testimonials -->
     <div class="test">
         <div class="container">
-            <h3 class="w3l_header w3_agileits_header">Our Recent <span>Activity</span></h3>
+            <h3 class="w3l_header w3_agileits_header">Our Recent <span>Activities</span></h3>
             <p class="sub_para_agile two">Ipsum dolor sit amet consectetur adipisicing elit</p>
 
             <div class="agile_inner_grids">
