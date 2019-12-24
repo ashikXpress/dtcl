@@ -32,6 +32,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Type</label>
+
+                            <div class="col-sm-4">
+                                <select class="form-control" name="type">
+                                    <option value="National" {{ empty(old('type')) ? ($errors->has('type') ? '' : ($client->type == 'National' ? 'selected' : '')) :
+                                            (old('type') == 'National' ? 'selected' : '') }}>National</option>
+                                    <option value="International" {{ empty(old('type')) ? ($errors->has('type') ? '' : ($client->type == 'International' ? 'selected' : '')) :
+                                            (old('type') == 'International' ? 'selected' : '') }}>International</option>
+
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group {{ $errors->has('image') ? 'has-error' :'' }}">
                             <label class="col-sm-2 control-label">Image</label>
 

@@ -20,6 +20,7 @@
                         <tr>
                             <th>Image</th>
                             <th>Name</th>
+                            <th>type</th>
                             <th>Action</th>
                         </tr>
 
@@ -29,6 +30,7 @@
                                     <img src="{{ asset('uploads/client/'.$client->image) }}" height="50px">
                                 </td>
                                 <td>{{ $client->name }}</td>
+                                <td>{{ $client->type }}</td>
                                 <td>
                                     <a href="{{ route('edit.client',$client->id)}}">Edit</a> |
                                     <a role="button" class="text-red btnDelete" data-id="{{ $client->id }}">Delete</a>

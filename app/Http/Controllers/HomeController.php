@@ -71,9 +71,11 @@ class HomeController extends Controller
         return view('gallery', compact('items'));
     }
 public function client(){
-    $clients = Client::get();
+    $data['nationals']= Client::where('type','National')->get();
+    $data['internationals'] = Client::where('type','International')->get();
 
-    return view('client', compact('clients'));
+
+    return view('client',$data);
 }
 public function ourTeam(){
         $data['bordMember']=Member::where('type','Board of Directors')->get();
@@ -125,7 +127,7 @@ public function activityDetails($id){
             'message' => $request->message
         ];
 
-        Mail::to('ctashiqkhan@gmail.com')->send(new ContactMail($data));
+        Mail::to(['ctashiqkhan@gmail.com','shantotrs@gmail.com'])->send(new ContactMail($data));
 
         return redirect()->back()->with('message', 'Message sent successfully.');
     }

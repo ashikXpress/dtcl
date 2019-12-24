@@ -41,6 +41,44 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group {{ $errors->has('sector') ? 'has-error' :'' }}">
+                            <label class="col-sm-2 control-label">Sector</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Enter sector"
+                                       name="sector" value="{{ old('sector') }}">
+
+                                @error('sector')
+                                <span class="help-block">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group {{ $errors->has('client') ? 'has-error' :'' }}">
+                            <label class="col-sm-2 control-label">Client</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Enter Client"
+                                       name="client" value="{{ old('client') }}">
+
+                                @error('client')
+                                <span class="help-block">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group {{ $errors->has('date') ? 'has-error' :'' }}">
+                            <label class="col-sm-2 control-label">Period</label>
+
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" placeholder="Enter date"
+                                       name="date" value="{{ old('date') }}">
+
+                                @error('date')
+                                <span class="help-block">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="form-group {{ $errors->has('image') ? 'has-error' :'' }}">
                             <label class="col-sm-2 control-label">Image</label>
@@ -54,17 +92,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group {{ $errors->has('description') ? 'has-error' :'' }}">
-                            <label class="col-sm-2 control-label">Description</label>
 
-                            <div class="col-sm-10">
-                                <textarea id="editor1" name="description" rows="10" cols="80">{{ old('description') }}</textarea>
 
-                                @error('description')
-                                <span class="help-block">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
                     </div>
                     <!-- /.box-body -->
 

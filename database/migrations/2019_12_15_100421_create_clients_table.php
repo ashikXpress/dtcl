@@ -16,6 +16,7 @@ class CreateClientsTable extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('type');
             $table->string('image');
             $table->timestamps();
         });

@@ -22,8 +22,11 @@ class ProjectController extends Controller
     public function addPost(Request $request) {
         $request->validate([
             'title' => 'required|max:255',
+            'type' => 'required',
             'image' => 'required|image',
-            'description' => 'required'
+            'sector' => 'required',
+            'client' => 'required',
+            'date' => 'required',
         ]);
 
         // Upload Image
@@ -35,8 +38,11 @@ class ProjectController extends Controller
         $project = new Project();
         $project->type = $request->type;
         $project->title = $request->title;
+        $project->sector = $request->sector;
+        $project->client = $request->client;
+        $project->date = $request->date;
         $project->image = $filename;
-        $project->description = $request->description;
+
         $project->save();
 
         return redirect()->route('admin_all_project')->with('message', 'Project add successfully.');
@@ -50,12 +56,15 @@ class ProjectController extends Controller
     public function editPost(Project $project, Request $request) {
         $request->validate([
             'title' => 'required|max:255',
+            'type' => 'required',
             'image' => 'image',
-            'description' => 'required'
+            'sector' => 'required',
+            'client' => 'required',
+            'date' => 'required',
         ]);
 
         if ($request->image) {
-            unlink('public/uploads/project/'.$project->image);
+            //unlink('public/uploads/project/'.$project->image);
 
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
@@ -67,7 +76,9 @@ class ProjectController extends Controller
 
         $project->type = $request->type;
         $project->title = $request->title;
-        $project->description = $request->description;
+        $project->sector = $request->sector;
+        $project->client = $request->client;
+        $project->date = $request->date;
         $project->save();
 
         return redirect()->route('admin_all_project')->with('message', 'Project update successfully.');
@@ -75,7 +86,7 @@ class ProjectController extends Controller
 
     public function delete(Request $request) {
         $project = Project::find($request->id);
-        unlink('public/uploads/project/'.$project->image);
+        //unlink('public/uploads/project/'.$project->image);
         $project->delete();
     }
 }

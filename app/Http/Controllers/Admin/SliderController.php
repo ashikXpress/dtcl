@@ -64,7 +64,7 @@ class SliderController extends Controller
         ], $messages);
 
         if ($request->image) {
-            unlink('public/uploads/slider/' . $slider->image);
+            //unlink('public/uploads/slider/' . $slider->image);
 
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
@@ -84,7 +84,7 @@ class SliderController extends Controller
 
     public function delete(Request $request) {
         $slider = Slider::find($request->id);
-        unlink('public/uploads/slider/'.$slider->image);
+        //unlink('public/uploads/slider/'.$slider->image);
         $slider->delete();
     }
 }

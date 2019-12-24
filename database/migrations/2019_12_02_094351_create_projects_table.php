@@ -17,8 +17,10 @@ class CreateProjectsTable extends Migration
             $table->bigIncrements('id');
             $table->string('type');
             $table->string('title', 255);
+            $table->string('sector' );
+            $table->string('client');
+            $table->date('date');
             $table->string('image');
-            $table->longText('description');
             $table->timestamps();
         });
     }

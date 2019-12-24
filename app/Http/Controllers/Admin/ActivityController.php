@@ -80,7 +80,7 @@ class ActivityController extends Controller
         ]);
 
         if ($request->image1) {
-            unlink('public/uploads/activity/'.$activity->image1);
+            //unlink('public/uploads/activity/'.$activity->image1);
             $file = $request->file('image1');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
             $destinationPath = 'public/uploads/activity/';
@@ -89,7 +89,7 @@ class ActivityController extends Controller
             $activity->image1= $filename;
         }
         if ($request->image2) {
-            unlink('public/uploads/activity/'.$activity->image2);
+            //unlink('public/uploads/activity/'.$activity->image2);
             $file = $request->file('image2');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
             $destinationPath = 'public/uploads/activity/';
@@ -98,7 +98,7 @@ class ActivityController extends Controller
             $activity->image2= $filename;
         }
         if ($request->image3) {
-            unlink('public/uploads/activity/'.$activity->image3);
+            //unlink('public/uploads/activity/'.$activity->image3);
             $file = $request->file('image3');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
             $destinationPath = 'public/uploads/activity/';
@@ -120,9 +120,9 @@ class ActivityController extends Controller
 
     public function deleteOurActivity(Request $request){
         $activity = Activity::find($request->id);
-        unlink('public/uploads/activity/'.$activity->image1);
-        unlink('public/uploads/activity/'.$activity->image2);
-        unlink('public/uploads/activity/'.$activity->image3);
+        //unlink('public/uploads/activity/'.$activity->image1);
+        //unlink('public/uploads/activity/'.$activity->image2);
+        //unlink('public/uploads/activity/'.$activity->image3);
         $activity->delete();
     }
 }

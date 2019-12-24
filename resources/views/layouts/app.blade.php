@@ -6,6 +6,7 @@
     <!-- custom-theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="{{asset('fontend/images/favicon.ico')}}" type="image/x-icon">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
         function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- //custom-theme -->
@@ -22,6 +23,35 @@
     <link href="{{ asset('fontend/lightbox2/css/lightbox.min.css') }}" rel="stylesheet" />
     <!-- //font-awesome-icons -->
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        .navbar-default .navbar-nav > li > a, .dropdown-menu > li > a {
+            font-family: 'Roboto', sans-serif;
+            padding-right: 4px;
+            font-size: 14px;
+        }
+
+        .main_section_agile {
+            position: fixed;
+            z-index: 99;
+            background: #fff;
+            width: 100%;
+            box-shadow: 0px 1px 12px #ddd;
+        }
+
+        .sister-item i {
+            color: #e1a312;
+            margin-right: 6px;
+        }
+
+        .sister-item {
+            margin: 0 0 13px 0;
+        }
+
+        .sister-item a {
+            color: #fff;
+        }
+    </style>
     @yield('additionalCSS')
 
 
@@ -90,7 +120,7 @@
         <div class="w3_agile_footer_grids">
             <div class="col-md-4 w3_agile_footer_grid">
                 <h3>Location</h3>
-                <div id="map_footer" style="height: 150px"></div>
+                <div id="map_footer" style="height: 342px"></div>
             </div>
             <div class="col-md-4 w3_agile_footer_grid">
                 <h3>Navigation</h3>
@@ -125,13 +155,15 @@
                 <div class="wthree_footer_grid_left">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                 </div>
-                <p><a href="tel:+880 2 9856438">+880 2 9856438</a><span><a href="tel:9856439">9856439</a></span></p>
+                <p><a href="tel:+880 2 9856438">+880 2 9856438</a></p>
             </div>
             <div class="col-md-4 w3ls_footer_grid_left">
                 <div class="wthree_footer_grid_left">
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 </div>
-                <p><a href="mailto:info@dtcltd.org">info@dtcltd.org</a>
+                <p>
+                    <a href="mailto:info@dtcltd.org">info@dtcltd.org</a><br>
+                    <a href="mailto:info@dtcltd.org">info.dtclgroup@gmail.com</a>
 
             </div>
             <div class="clearfix"> </div>
@@ -139,15 +171,24 @@
 
         <div class="sister-concern">
 
-            <ul>
-                <li>SISTER CONCERN: </li>
-                <li><a href="#">dtcl consulting firm</a></li>
-                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">dtcl consulting firm</a></li>
-                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">dtcl future teach</a></li>
-                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">development engineering pvt. ltd.</a></li>
-                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">dtcl e-shoping</a></li>
-                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">dtcl agro industries</a></li>
-                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">itmc</a></li>
+            <ul class="row">
+                <li class="col-md-2">SISTER CONCERN: </li>
+                <span class="col-md-3">
+                   <li class="col-md-12  sister-item"><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">DTCL Consulting Firm</a></li>
+                    <li class="col-md-12  sister-item"><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">DTCL-Future Tech</a></li>
+
+                </span>
+                <span class="col-md-4">
+                     <li class="col-md-12  sister-item"><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">Development Engineering Pvt. Ltd.</a></li>
+                    <li class="col-md-12  sister-item"><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">DTCL-e-Commerce</a></li>
+
+                </span>
+                <span class="col-md-3">
+                    <li class="col-md-12  sister-item"><i class="fa fa-long-arrow-right" aria-hidden="true"></i><a href="#">DTCL-Agro Industries</a></li>
+
+                </span>
+
+
             </ul>
         </div>
         <div class="agileinfo_copyright">

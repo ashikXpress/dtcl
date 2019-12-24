@@ -21,6 +21,9 @@
                             <th>Image</th>
                             <th>Type</th>
                             <th>Title</th>
+                            <th>Sector</th>
+                            <th>Client</th>
+                            <th>Date</th>
                             <th>Action</th>
                         </tr>
 
@@ -31,7 +34,10 @@
                                 </td>
 
                                 <td>{{ $project->type }}</td>
-                                <td width="60%">{{ $project->title }}</td>
+                                <td>{{ $project->title }}</td>
+                                <td>{{ $project->sector }}</td>
+                                <td>{{ $project->client }}</td>
+                                <td>{{ $project->date }}</td>
                                 <td>
                                     <a href="{{ route('edit_project', ['project' => $project->id]) }}">Edit</a> |
                                     <a role="button" class="text-red btnDelete" data-id="{{ $project->id }}">Delete</a>

@@ -63,7 +63,7 @@ class TeamController extends Controller
        ]);
 
        if ($request->image) {
-           unlink('public/uploads/team/'.$member->image);
+           //unlink('public/uploads/team/'.$member->image);
 
            $file = $request->file('image');
            $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
@@ -85,7 +85,7 @@ class TeamController extends Controller
 
    public function teamMemberDelete(Request $request){
        $member = Member::find($request->id);
-       unlink('public/uploads/team/'.$member->image);
+       //unlink('public/uploads/team/'.$member->image);
        $member->delete();
    }
 }

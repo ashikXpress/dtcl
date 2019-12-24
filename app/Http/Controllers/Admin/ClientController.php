@@ -24,6 +24,7 @@ class ClientController extends Controller
     public function addClient(Request $request){
         $this->validate($request,[
             'name'=>'required|max:50',
+            'type'=>'required|max:50',
             'image'=>'required|image',
         ]);
 
@@ -35,6 +36,7 @@ class ClientController extends Controller
 
         $client = new Client();
         $client->name = $request->name;
+        $client->type = $request->type;
         $client->image =$filename;
 
         $client->save();
@@ -51,11 +53,12 @@ class ClientController extends Controller
     public function updateClient(Client $client,Request $request){
         $this->validate($request,[
             'name'=>'required|max:50',
+            'type'=>'required|max:50',
             'image'=>'image',
         ]);
 
         if ($request->image) {
-            unlink('public/uploads/client/'.$client->image);
+            //unlink('public/uploads/client/'.$client->image);
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
             $destinationPath = 'public/uploads/client/';
@@ -63,6 +66,7 @@ class ClientController extends Controller
             $client->image= $filename;
         }
         $client->name = $request->name;
+        $client->type = $request->type;
         $client->update();
 
         return redirect()->route('all.client')->with('message', 'Client update successfully.');
@@ -71,7 +75,7 @@ class ClientController extends Controller
 
     public function deleteClient(Request $request){
         $client = Client::find($request->id);
-        unlink('public/uploads/client/'.$client->image);
+        //unlink('public/uploads/client/'.$client->image);
         $client->delete();
     }
 }

@@ -41,18 +41,29 @@
             <p class="sub_para_agile two">Ipsum dolor sit amet consectetur adipisicing elit</p><br>
 
           <div class="row">
-              @foreach($clients as $client)
+              <h2 class="text-center" style="margin-bottom: 15px;">National</h2>
+              @foreach($nationals as $client)
                     <div class="col-md-3">
-                        <div class="client">
+                        <div  class="client">
                             <img src="{{ asset('uploads/client/'.$client->image) }}"  alt="{{$client->name}}">
                             <div class="client-text">
                                 <h5 class="card-title">{{$client->name}}</h5>
                             </div>
                         </div>
                     </div>
-
-
-
+              @endforeach
+          </div>
+          <div class="row">
+              <h2 class="text-center" style="margin-bottom: 15px;">International</h2>
+              @foreach($internationals as $client)
+                    <div class="col-md-3">
+                        <div  class="client">
+                            <img src="{{ asset('uploads/client/'.$client->image) }}"  alt="{{$client->name}}">
+                            <div class="client-text">
+                                <h5 class="card-title">{{$client->name}}</h5>
+                            </div>
+                        </div>
+                    </div>
               @endforeach
           </div>
         </div>

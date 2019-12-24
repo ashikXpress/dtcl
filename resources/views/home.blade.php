@@ -18,6 +18,40 @@
             width: 100%;
             object-fit: contain;
         }
+
+        .about-text {
+            text-align: center;
+            margin-top: 14px;
+        }
+
+        .about-text h4 {
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .about-text h5 {
+            text-transform: capitalize;
+            padding: 3px 0;
+        }
+        .w3_agileits_about_grid_left span{
+            margin-bottom: 0;
+        }
+
+        .about-more{
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .choose_icon:hover {
+            cursor: pointer;
+        }
+        .choose_icon:hover h3{
+            color:#0dbd6d;
+        }
+
+        .choose_right a {
+            color: #fff;
+        }
     </style>
 
 
@@ -57,25 +91,57 @@
             <div class="agile_inner_grids">
 
                 <div class="col-md-6 w3_agileits_about_grid_left">
-                    <p>Duis turpis arcu, dictum eu tincidunt id, congue vel urna. Quisque posuere,
-                        ipsum eu faucibus cursus, ex tortor elementum leo, eget varius lorem quam a nisl.
-                        Mauris ut enim sed tortor auctor luctus at vitae est.<span>Duis dignissim auctor rhoncus.
-                        Curabitur diam lorem, ultricies eu pellentesque sed, elementum sodales urna.
-                        Pellentesque molestie maximus nisl at ultrices.</span> </p>
+                    <p>
+                        Development Technical Consultants Pvt. Ltd. (DTCL) is an ISO 9001:2015 leading consulting firm of Bangladesh founded in 2001. Appropriate and adequate technical know-how is one of the pre-requisites for the development of the country. But its lack has greatly hampered the country’s development work - a common phenomenon observed in all developing countries.
+
+
+                        <span> Hence, the increase in technical capabilities, both qualitative and quantitative, of Bangladeshi professionals’ needs immediate attention, Economic development of the country is in fact directly proportional to its technical capabilities. DTCL is duly registered with ADB through CMS No. 012563 and the World Bank including other bilateral and multilateral donors and government agencies.</span>
+                        <a class="about-more" href="{{url('page/about-us')}}">Read more</a>
+                    </p>
                     <ul>
                         <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Marketing</li>
                         <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Professional approach</li>
-                        <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Production</li>
+                        <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Service</li>
                         <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Effective Solutions</li>
                     </ul>
                 </div>
                 <div class="col-md-6 w3_agileits_about_grid_right">
                     <div class="about-carousel owl-carousel">
-                        <div class="item"><img src="{{asset('fontend/images/1.jpg')}}" alt=""></div>
-                        <div class="item"><img src="{{asset('fontend/images/2.jpg')}}" alt=""></div>
-                        <div class="item"><img src="{{asset('fontend/images/3.jpg')}}" alt=""></div>
-                        <div class="item"><img src="{{asset('fontend/images/4.jpg')}}" alt=""></div>
-                        <div class="item"><img src="{{asset('fontend/images/5.jpg')}}" alt=""></div>
+                        <div class="item">
+                            <img src="{{asset('fontend/images/1.jpg')}}" alt="">
+                            <div class="about-text">
+                                <h4>Md. Jonh Deo</h4>
+                                <h5>Manager</h5>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{asset('fontend/images/2.jpg')}}" alt="">
+                            <div class="about-text">
+                                <h4>Md. Jonh Deo</h4>
+                                <h5>Manager</h5>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{asset('fontend/images/3.jpg')}}" alt="">
+                            <div class="about-text">
+                                <h4>Md. Jonh Deo</h4>
+                                <h5>Manager</h5>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{asset('fontend/images/4.jpg')}}" alt="">
+                            <div class="about-text">
+                                <h4>Md. Jonh Deo</h4>
+                                <h5>Manager</h5>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{asset('fontend/images/5.jpg')}}" alt="">
+                            <div class="about-text">
+                                <h4>Md. Jonh Deo</h4>
+                                <h5>Manager</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="clearfix"> </div>
@@ -164,6 +230,7 @@
                         <div class="choose_right">
                             <h3>Agricultural, Fisheries & Livestock </h3>
                             <p>With significant experience spanning farm to market, including policy, value chain analysis, research and extension.</p>
+                            <a href="{{url('page/agricultural-fisheries-livestock')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -174,6 +241,7 @@
                         <div class="choose_right">
                             <h3>Education & Training </h3>
                             <p>Including pre-primary, primary, secondary and tertiary education as well as non-formal, technical and vocational education & training (TVET) policy.</p>
+                            <a href="{{url('page/education-training')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -187,6 +255,7 @@
                         <div class="choose_right">
                             <h3>Social Development</h3>
                             <p>Focusing on developing and strengthening the capacity of cooperatives, NGOs, associations and other organizations .</p>
+                            <a href="{{url('page/social-development')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -197,6 +266,7 @@
                         <div class="choose_right">
                             <h3>Forest & Environment</h3>
                             <p>With significant experience in forest resource management, forest resource monitoring and assessment, management .</p>
+                            <a href="{{url('page/forest-environment')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -210,6 +280,7 @@
                         <div class="choose_right">
                             <h3>Power & Energy</h3>
                             <p>With significant experience in generation, transmission and distribution, planning and management, policy .</p>
+                            <a href="{{url('page/power-energy')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -220,6 +291,7 @@
                         <div class="choose_right">
                             <h3>Information & Communication Technology</h3>
                             <p>Spanning data collection using tab and mobile apps, information management system including design, development.</p>
+                            <a href="{{url('page/information-communication-technology')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -231,8 +303,9 @@
                             <i class="fa fa-taxi" aria-hidden="true"></i>
                         </div>
                         <div class="choose_right">
-                            <h3>Infrastructure & Transport       </h3>
+                            <h3>Infrastructure & Transport</h3>
                             <p>Covering all aspects of infrastructure development includes ‘Rural & Urban, Roads, Bridge, Culverts, Rail, Shipping .</p>
+                            <a href="{{url('page/infrastructure-transport')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -243,6 +316,7 @@
                         <div class="choose_right">
                             <h3>Infrastructure Development</h3>
                             <p>Infrastructure Development covering all aspects of infrastructure development includes Rural and Urban, Roads</p>
+                            <a href="{{url('page/infrastructure-development')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -256,6 +330,7 @@
                         <div class="choose_right">
                             <h3>Water Resource, Water Supply & Sanitation</h3>
                             <p>Including water resource management, water supply, sanitation, urban development engineering and infrastructure.</p>
+                            <a href="{{url('page/water-resource-water-supply-sanitation')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -266,6 +341,8 @@
                         <div class="choose_right">
                             <h3>Health and Population</h3>
                             <p>Covering health, family welfare and population sector. The service in the field includes general health, primary .</p>
+                            <a href="{{url('page/health-and-population')}}">More</a>
+
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -279,6 +356,7 @@
                         <div class="choose_right">
                             <h3>Economic & Financial Management         </h3>
                             <p>Public private partnership (PPP), macro/micro finance, SME, capital market development, fiscal management.</p>
+                            <a href="{{url('page/economic-financial-management')}}">More</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -341,7 +419,8 @@
                                 </div>
 
                                 <div class="col-md-12 test-grid1">
-                                    <h4>{{$activity->title}} </h4>
+                                    <h4><strong>{{$activity->title}}</strong> </h4>
+                                    <date>{{date('m/d/Y h:i:s a', strtotime($activity->date))}}</date><br>
                                     {!! $activity->description !!}
 
                                 </div>

@@ -56,8 +56,8 @@ class GalleryController extends Controller
         ]);
 
         if ($request->image) {
-            unlink('public/uploads/gallery/' . $item->image);
-            unlink('public/uploads/gallery/thumbs/' . $item->image);
+            //unlink('public/uploads/gallery/' . $item->image);
+            //unlink('public/uploads/gallery/thumbs/' . $item->image);
 
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
@@ -80,8 +80,8 @@ class GalleryController extends Controller
 
     public function delete(Request $request) {
         $item = GalleryItem::find($request->id);
-        unlink('public/uploads/gallery/'.$item->image);
-        unlink('public/uploads/gallery/thumbs/'.$item->image);
+        //unlink('public/uploads/gallery/'.$item->image);
+        //unlink('public/uploads/gallery/thumbs/'.$item->image);
         $item->delete();
     }
 }

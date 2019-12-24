@@ -68,7 +68,7 @@ class NewsController extends Controller
         ]);
 
         if ($request->image) {
-            unlink('public/uploads/news/image/' . $news->image);
+            //unlink('public/uploads/news/image/' . $news->image);
 
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
@@ -79,7 +79,7 @@ class NewsController extends Controller
         }
 
         if ($request->file) {
-            unlink('public/uploads/news/file/' . $news->filename);
+            //unlink('public/uploads/news/file/' . $news->filename);
 
             $file = $request->file('file');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
@@ -100,8 +100,8 @@ class NewsController extends Controller
 
     public function delete(Request $request) {
         $news = News::find($request->id);
-        unlink('public/uploads/news/image/'.$news->image);
-        unlink('public/uploads/news/file/'.$news->filename);
+        //unlink('public/uploads/news/image/'.$news->image);
+        //unlink('public/uploads/news/file/'.$news->filename);
         $news->delete();
     }
 }

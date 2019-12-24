@@ -56,7 +56,7 @@ class SayController extends Controller
         ]);
 
         if ($request->image) {
-            unlink('public/uploads/says/' . $say->image);
+            //unlink('public/uploads/says/' . $say->image);
 
             $file = $request->file('image');
             $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
@@ -76,7 +76,7 @@ class SayController extends Controller
 
     public function delete(Request $request) {
         $say = Say::find($request->id);
-        unlink('public/uploads/says/'.$say->image);
+        //unlink('public/uploads/says/'.$say->image);
         $say->delete();
     }
 }
