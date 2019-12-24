@@ -107,41 +107,41 @@
                 </div>
                 <div class="col-md-6 w3_agileits_about_grid_right">
                     <div class="about-carousel owl-carousel">
-                        <div class="item">
+                        <a href="{{url('our-team')}}" class="item">
                             <img src="{{asset('fontend/images/1.jpg')}}" alt="">
                             <div class="about-text">
                                 <h4>Md. Jonh Deo</h4>
                                 <h5>Manager</h5>
                             </div>
-                        </div>
-                        <div class="item">
+                        </a>
+                        <a href="{{url('our-team')}}" class="item">
                             <img src="{{asset('fontend/images/2.jpg')}}" alt="">
-                            <div class="about-text">
+                            <a class="about-text">
                                 <h4>Md. Jonh Deo</h4>
                                 <h5>Manager</h5>
-                            </div>
-                        </div>
-                        <div class="item">
+                            </a>
+                        </a>
+                        <a href="{{url('our-team')}}" class="item">
                             <img src="{{asset('fontend/images/3.jpg')}}" alt="">
                             <div class="about-text">
                                 <h4>Md. Jonh Deo</h4>
                                 <h5>Manager</h5>
                             </div>
-                        </div>
-                        <div class="item">
+                        </a>
+                        <a href="{{url('our-team')}}" class="item">
                             <img src="{{asset('fontend/images/4.jpg')}}" alt="">
                             <div class="about-text">
                                 <h4>Md. Jonh Deo</h4>
                                 <h5>Manager</h5>
                             </div>
-                        </div>
-                        <div class="item">
+                        </a>
+                        <a href="{{url('our-team')}}" class="item">
                             <img src="{{asset('fontend/images/5.jpg')}}" alt="">
                             <div class="about-text">
                                 <h4>Md. Jonh Deo</h4>
                                 <h5>Manager</h5>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="clearfix"> </div>

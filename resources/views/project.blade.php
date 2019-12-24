@@ -16,6 +16,9 @@
                     <tr>
                         <th scope="col">SL</th>
                         <th scope="col">Project Title</th>
+                        <th scope="col">Sector</th>
+                        <th scope="col">Client</th>
+                        <th scope="col">Date</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -23,6 +26,10 @@
                     <tr>
                         <th scope="row">{{$loop->iteration}}</th>
                         <td><a  href="{{ route('project_details', ['id' => $project->id]) }}">{{ $project->title }}</a></td>
+
+                        <th scope="row">{{$project->sector}}</th>
+                        <th scope="row">{{$project->client}}</th>
+                        <th scope="row">{{$project->date}}</th>
 
                     </tr>
                 @endforeach

@@ -51,6 +51,11 @@
         .sister-item a {
             color: #fff;
         }
+        .map-icon-label .map-icon {
+            border: 10px solid red;
+            background-color: green;
+        }
+
     </style>
     @yield('additionalCSS')
 
@@ -192,7 +197,7 @@
             </ul>
         </div>
         <div class="agileinfo_copyright">
-            <p>Design & Developed by  <a target="_blank" href="http://2aitbd.com/">2A IT</a></p>
+            <p>&#169;Copy Right DTCL 2019-{{date('Y')}} | Design & Developed by  <a target="_blank" href="http://2aitbd.com/">2A IT</a></p>
         </div>
     </div>
 </div>
@@ -297,12 +302,26 @@
     // Initialize and add the map
     function initMap() {
         // The location of Uluru
-        var uluru = {lat: 23.772520, lng: 90.4056818};
+        var uluru = {lat: 23.7725022, lng: 90.4051359};
         // The map, centered at Uluru
         var map = new google.maps.Map(
             document.getElementById('map_footer'), {zoom: 16, center: uluru});
         // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({position: uluru, map: map});
+        //var image = "{{asset('fontend/images/299087-64.png')}}";
+        var image = {
+            url: "{{asset('fontend/images/299087-64.png')}}",
+            size: new google.maps.Size(32, 38),
+            scaledSize: new google.maps.Size(32, 38),
+            labelOrigin: new google.maps.Point(48, 20)
+        };
+        var marker = new google.maps.Marker({
+            position: uluru, map: map,
+            icon:image,
+            title:'DTCL',
+            label: { color:'red', fontWeight: 'bold', fontSize: '14px', text: 'DTCL' },
+        });
+
+
     }
 </script>
 

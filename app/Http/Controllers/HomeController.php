@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        $sliders = Slider::orderBy('sort')->get();
+        $sliders = Slider::orderBy('sort')->take(8)->get();
         $projects = Project::latest()->take(8)->get();
         $newses = News::latest()->take(3)->get();
         $says = Say::all();
@@ -127,7 +127,7 @@ public function activityDetails($id){
             'message' => $request->message
         ];
 
-        Mail::to(['ctashiqkhan@gmail.com','shantotrs@gmail.com'])->send(new ContactMail($data));
+        Mail::to(['info@dtcltd.org','info.dtclgroup@gmail.com'])->send(new ContactMail($data));
 
         return redirect()->back()->with('message', 'Message sent successfully.');
     }

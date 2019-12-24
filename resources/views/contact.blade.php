@@ -91,12 +91,31 @@
             var map = new google.maps.Map(
                 document.getElementById('map'), {zoom: 19, center: uluru});
             // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({position: uluru, map: map});
 
-            var map = new google.maps.Map(
-                document.getElementById('map_footer'), {zoom: 16, center: uluru});
+            var foot = new google.maps.Map(
+                document.getElementById('map_footer'), {zoom: 16, center: uluru}
+                );
 
-            var marker = new google.maps.Marker({position: uluru, map: map});
+
+            var image = {
+                url: "{{asset('fontend/images/299087-64.png')}}",
+                size: new google.maps.Size(32, 38),
+                scaledSize: new google.maps.Size(32, 38),
+                labelOrigin: new google.maps.Point(48, 20)
+            };
+
+            var marker = new google.maps.Marker({
+                position: uluru, map: map,
+                icon:image,
+                title:'DTCL',
+                label: { color:'red', fontWeight: 'bold', fontSize: '14px', text: 'DTCL' },
+            });
+            var marker2 = new google.maps.Marker({
+                position: uluru, map: foot,
+                icon:image,
+                title:'DTCL',
+                label: { color:'red', fontWeight: 'bold', fontSize: '14px', text: 'DTCL' },
+            });
         }
     </script>
 @endsection
