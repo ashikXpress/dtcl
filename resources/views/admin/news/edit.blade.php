@@ -17,18 +17,7 @@
                     @csrf
 
                     <div class="box-body">
-                        <div class="form-group {{ $errors->has('title') ? 'has-error' :'' }}">
-                            <label class="col-sm-2 control-label">Title</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter title"
-                                       name="title" value="{{ empty(old('title')) ? ($errors->has('title') ? '' : $news->title) : old('title') }}">
-
-                                @error('title')
-                                <span class="help-block">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
 
                         <div class="form-group {{ $errors->has('image') ? 'has-error' :'' }}">
                             <label class="col-sm-2 control-label">Image</label>
@@ -42,30 +31,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group {{ $errors->has('author') ? 'has-error' :'' }}">
-                            <label class="col-sm-2 control-label">Author</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter author"
-                                       name="author" value="{{ empty(old('author')) ? ($errors->has('author') ? '' : $news->author) : old('author') }}">
 
-                                @error('author')
-                                <span class="help-block">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group {{ $errors->has('file') ? 'has-error' :'' }}">
-                            <label class="col-sm-2 control-label">File</label>
-
-                            <div class="col-sm-10">
-                                <input type="file" class="form-control" name="file">
-
-                                @error('file')
-                                <span class="help-block">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
 
                         <div class="form-group {{ $errors->has('upload_date') ? 'has-error' :'' }}">
                             <label class="col-sm-2 control-label">Upload Date</label>

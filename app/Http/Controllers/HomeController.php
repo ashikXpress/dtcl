@@ -19,9 +19,9 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        $sliders = Slider::orderBy('sort')->take(8)->get();
-        $projects = Project::latest()->take(8)->get();
-        $newses = News::latest()->take(3)->get();
+        $sliders = Slider::orderBy('sort')->get();
+        $projects = Project::orderBy('start_date','desc')->take(8)->get();
+        $newses = News::latest()->take(4)->get();
         $says = Say::all();
         $activities=Activity::latest()->take(5)->get();
         $allproject=Project::count();
@@ -45,13 +45,24 @@ class HomeController extends Controller
         return view('page', compact('item'));
     }
 
+    public function sectorPage($slug) {
+        $item = SubMenu::where('slug', $slug)->first();
+
+        if (!$item)
+            abort(404);
+
+        $projects = Project::where('sector', $item->name)->get();
+
+        return view('sector_page', compact('item', 'projects'));
+    }
+
     public function project($type) {
         if ($type == 'complete') {
-            $projects = Project::where('type', 'Complete')->paginate(9);
+            $projects = Project::where('type', 'Complete')->orderBy('start_date','desc')->paginate(9);
         } elseif ($type == 'ongoing') {
-            $projects = Project::where('type', 'Ongoing')->paginate(9);
+            $projects = Project::where('type', 'Ongoing')->orderBy('start_date','desc')->paginate(9);
         } elseif ($type == 'shortlisted') {
-            $projects = Project::where('type', 'Shortlisted')->paginate(9);
+            $projects = Project::where('type', 'Shortlisted')->orderBy('start_date','desc')->paginate(9);
         } else {
             abort(404);
         }
@@ -66,7 +77,7 @@ class HomeController extends Controller
     }
 
     public function gallery() {
-        $items = GalleryItem::paginate(16);
+        $items = GalleryItem::orderBy('id','desc')->paginate(16);
 
         return view('gallery', compact('items'));
     }
@@ -76,6 +87,12 @@ public function client(){
 
 
     return view('client',$data);
+}
+
+public function clientProject($id){
+        $client=Client::where('id',$id)->first();
+        $projects=Project::where('client',$client->name)->paginate(20);
+        return view('client_project',compact('projects','client'));
 }
 public function ourTeam(){
         $data['bordMember']=Member::where('type','Board of Directors')->get();
@@ -87,7 +104,7 @@ public function ourTeam(){
 }
 
 public function recentActivities(){
-        $data['activites']=Activity::paginate(9);
+        $data['activites']=Activity::orderBy('date','desc')->paginate(9);
         return view('activities',$data);
 }
 public function activityDetails($id){
@@ -95,7 +112,7 @@ public function activityDetails($id){
     return view('activity_details',$data);
 }
     public function news() {
-        $newses = News::latest()->paginate(6);
+        $newses = News::orderBy('uploaded_at','desc')->paginate(9);
 
         return view('news', compact('newses'));
     }

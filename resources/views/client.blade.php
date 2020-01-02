@@ -38,18 +38,20 @@
     <section class="ftco-section inner_main_agile_section">
         <div class="container">
             <h3 class="w3l_header w3_agileits_header">Our <span>Clients</span></h3>
-            <p class="sub_para_agile two">Ipsum dolor sit amet consectetur adipisicing elit</p><br>
 
           <div class="row">
               <h2 class="text-center" style="margin-bottom: 15px;">National</h2>
               @foreach($nationals as $client)
                     <div class="col-md-3">
-                        <div  class="client">
-                            <img src="{{ asset('uploads/client/'.$client->image) }}"  alt="{{$client->name}}">
-                            <div class="client-text">
-                                <h5 class="card-title">{{$client->name}}</h5>
+                        <a href="{{route('client.project',$client->id)}}">
+                            <div  class="client">
+                                <img src="{{ asset('uploads/client/'.$client->image) }}"  alt="{{$client->name}}">
+                                <div class="client-text">
+                                    <h5 class="card-title">{{$client->name}}</h5>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+
                     </div>
               @endforeach
           </div>
@@ -57,12 +59,15 @@
               <h2 class="text-center" style="margin-bottom: 15px;">International</h2>
               @foreach($internationals as $client)
                     <div class="col-md-3">
-                        <div  class="client">
-                            <img src="{{ asset('uploads/client/'.$client->image) }}"  alt="{{$client->name}}">
-                            <div class="client-text">
-                                <h5 class="card-title">{{$client->name}}</h5>
+                        <a href="{{route('client.project',$client->id)}}">
+                            <div  class="client">
+                                <img src="{{ asset('uploads/client/'.$client->image) }}"  alt="{{$client->name}}">
+                                <div class="client-text">
+                                    <h5 class="card-title">{{$client->name}}</h5>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+
                     </div>
               @endforeach
           </div>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Foundation\Inspiring;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Foundation\Inspiring;
 |
 */
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
+Artisan::command('ashik', function () {
+    $this->comment('Ashik khan');
 })->describe('Display an inspiring quote');
+
+Artisan::command('khan', function (){
+    $this->comment('Welcome to new artisan command');
+});

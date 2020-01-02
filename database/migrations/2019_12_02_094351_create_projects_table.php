@@ -19,8 +19,10 @@ class CreateProjectsTable extends Migration
             $table->string('title', 255);
             $table->string('sector' );
             $table->string('client');
-            $table->date('date');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->string('image');
+            $table->longText('description');
             $table->timestamps();
         });
     }

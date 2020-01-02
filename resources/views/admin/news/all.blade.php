@@ -19,8 +19,6 @@
                     <table class="table table-bordered">
                         <tr>
                             <th>Image</th>
-                            <th>Author</th>
-                            <th>Title</th>
                             <th>Action</th>
                         </tr>
 
@@ -29,9 +27,6 @@
                                 <td>
                                     <img src="{{ asset('uploads/news/image/'.$news->image) }}" height="50px">
                                 </td>
-
-                                <td>{{ $news->author }}</td>
-                                <td width="60%">{{ $news->title }}</td>
                                 <td>
                                     <a href="{{ route('edit_news', ['news' => $news->id]) }}">Edit</a> |
                                     <a role="button" class="text-red btnDelete" data-id="{{ $news->id }}">Delete</a>

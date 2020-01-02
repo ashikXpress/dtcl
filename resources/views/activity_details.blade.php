@@ -42,7 +42,7 @@
 
                                     <div class="col-md-12 test-grid1">
                                         <h4>{{$activity->title}} </h4>
-                                        <h5><strong>{{date('d F Y h:i A', strtotime($activity->date))}}</strong></h5>
+                                        <h5><strong>{{date('d F Y', strtotime($activity->date))}}</strong></h5>
                                         {!! $activity->description !!}
 
                                     </div>

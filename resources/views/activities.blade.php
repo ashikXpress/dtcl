@@ -1,5 +1,17 @@
 @extends('layouts.app')
+@section('additionalCSS')
+    <style>
 
+        .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+            font-size: 16px;
+            color: #000;
+            border-top: none !important;
+        }
+        th {
+            text-align: center;
+        }
+    </style>
+@endsection
 @section('content')
     <div class="banner1">
 
@@ -24,7 +36,7 @@
                         <tr>
                             <th scope="row">{{$loop->iteration}}</th>
                             <td><a  href="{{ route('activity.details', ['id' => $activity->id]) }}">{{ $activity->title }}</a></td>
-                            <th scope="row">{{date('d F Y h:i A', strtotime($activity->date))}}</th>
+                            <th scope="row">{{date('d F Y', strtotime($activity->date))}}</th>
 
                         </tr>
                     @endforeach

@@ -14,9 +14,9 @@
         }
 
         .col-md-4.test-grid2.img-resize img {
-            height: 300px;
+            height: 250px;
             width: 100%;
-            object-fit: contain;
+            object-fit: cover;
         }
 
         .about-text {
@@ -52,6 +52,18 @@
         .choose_right a {
             color: #fff;
         }
+        a.item img {
+            width: 100%;
+        }
+        .w3_agileits_about_grid_left p {
+            text-align: justify;
+            color: #000;
+        }
+
+        .hovereffect.w3ls_banner_bottom_grid img {
+            width: 100%;
+            height: 250px;
+        }
     </style>
 
 
@@ -86,62 +98,41 @@
     <div class="inner_main_agile_section">
         <div class="container">
             <h3 class="w3l_header w3_agileits_header">About <span>Us</span></h3>
-            <p class="sub_para_agile two">Ipsum dolor sit amet consectetur adipisicing elit</p>
+            <p class="sub_para_agile two">A team of professionals</p>
 
             <div class="agile_inner_grids">
 
                 <div class="col-md-6 w3_agileits_about_grid_left">
                     <p>
-                        Development Technical Consultants Pvt. Ltd. (DTCL) is an ISO 9001:2015 leading consulting firm of Bangladesh founded in 2001. Appropriate and adequate technical know-how is one of the pre-requisites for the development of the country. But its lack has greatly hampered the country’s development work - a common phenomenon observed in all developing countries.
+                        Development Technical Consultants Pvt. Ltd. (DTCL) is an <strong>ISO 9001:2015</strong>  leading consulting firm of Bangladesh founded in 2001. Appropriate and adequate technical know-how is one of the pre-requisites for the development of the country. But its lack has greatly hampered the country’s development work - a common phenomenon observed in all developing countries.
 
 
-                        <span> Hence, the increase in technical capabilities, both qualitative and quantitative, of Bangladeshi professionals’ needs immediate attention, Economic development of the country is in fact directly proportional to its technical capabilities. DTCL is duly registered with ADB through CMS No. 012563 and the World Bank including other bilateral and multilateral donors and government agencies.</span>
-                        <a class="about-more" href="{{url('page/about-us')}}">Read more</a>
+                         Hence, the increase in technical capabilities, both qualitative and quantitative, of Bangladeshi professionals’ needs immediate attention, Economic development of the country is in fact directly proportional to its technical capabilities. DTCL is duly registered with ADB through CMS No. 012563 and the World Bank including other bilateral and multilateral donors and government agencies.
+
                     </p>
-                    <ul>
-                        <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Marketing</li>
-                        <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Professional approach</li>
-                        <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Service</li>
-                        <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Effective Solutions</li>
-                    </ul>
+
+                        <a class="about-more" href="{{url('page/about-us')}}">Read more</a>
+
                 </div>
                 <div class="col-md-6 w3_agileits_about_grid_right">
                     <div class="about-carousel owl-carousel">
                         <a href="{{url('our-team')}}" class="item">
-                            <img src="{{asset('fontend/images/1.jpg')}}" alt="">
+                            <img src="{{asset('fontend/images/about-slider/IMG_8824-300x200.jpg')}}" alt="">
                             <div class="about-text">
-                                <h4>Md. Jonh Deo</h4>
-                                <h5>Manager</h5>
+                                <h4>DR. M M AMIR HOSSAIN</h4>
+                                <h5>MANAGING DIRECTOR, DTCL</h5>
                             </div>
                         </a>
                         <a href="{{url('our-team')}}" class="item">
-                            <img src="{{asset('fontend/images/2.jpg')}}" alt="">
-                            <a class="about-text">
-                                <h4>Md. Jonh Deo</h4>
-                                <h5>Manager</h5>
-                            </a>
-                        </a>
-                        <a href="{{url('our-team')}}" class="item">
-                            <img src="{{asset('fontend/images/3.jpg')}}" alt="">
+                            <img src="{{asset('fontend/images/about-slider/IMG_8835.jpg')}}" alt="">
                             <div class="about-text">
-                                <h4>Md. Jonh Deo</h4>
-                                <h5>Manager</h5>
+                                <h4>DTCL Group</h4>
+
                             </div>
                         </a>
-                        <a href="{{url('our-team')}}" class="item">
-                            <img src="{{asset('fontend/images/4.jpg')}}" alt="">
-                            <div class="about-text">
-                                <h4>Md. Jonh Deo</h4>
-                                <h5>Manager</h5>
-                            </div>
-                        </a>
-                        <a href="{{url('our-team')}}" class="item">
-                            <img src="{{asset('fontend/images/5.jpg')}}" alt="">
-                            <div class="about-text">
-                                <h4>Md. Jonh Deo</h4>
-                                <h5>Manager</h5>
-                            </div>
-                        </a>
+
+
+
                     </div>
                 </div>
                 <div class="clearfix"> </div>
@@ -155,13 +146,13 @@
         <div class="container">
 
             <h2 class="w3l_header w3_agileits_header">Recent <span>Projects</span> </h2>
-            <p class="sub_para_agile">Ipsum dolor sit amet consectetur adipisicing elit</p>
-            @foreach($projects->chunk(4) as $chunk)
+
+            @foreach($projects->chunk(3) as $chunk)
             <div class="agileits_banner_bottom_grids {{ $loop->first ? '' : 'two' }}">
                 @foreach($chunk as $project)
-                    <div class="col-md-3 agileits_banner_bottom_grid">
+                    <div class="col-md-4 agileits_banner_bottom_grid">
                         <div class="hovereffect w3ls_banner_bottom_grid">
-                            <img src="{{asset('uploads/project/'.$project->image)}}" alt=" " class="img-responsive" />
+                            <img src="{{asset('uploads/project/'.$project->image)}}" alt=" " class="img-responsive " />
                             <div class="overlay">
                                 <h4>{{ $project->title }}</h4>
                                 <p><a class="project-see" href="{{ route('project_details', ['id' => $project->id]) }}">More...</a></p>
@@ -182,7 +173,6 @@
         <div class="events">
             <div class="container">
                 <h3 class="w3l_header w3_agileits_header">Recent <span>News</span></h3>
-                <p class="sub_para_agile two">Ipsum dolor sit amet consectetur adipisicing elit</p>
 
                 <br>
                 <ul id="flexiselDemo1">
@@ -190,7 +180,8 @@
                         <li>
                             <div class="w3layouts_event_grid">
                                 <div class="w3_agile_event_grid1">
-                                    <img src="{{asset('fontend/images/1.jpg')}}" alt=" " class="img-responsive" />
+                                    <img src="{{asset('uploads/news/image/'.$news->image)}}" alt=" " class="img-responsive" />
+
                                     <div class="w3_agile_event_grid1_pos">
                                         <p>
                                             {{ date("d F Y", strtotime($news->uploaded_at)) }}
@@ -200,7 +191,8 @@
 
                                 </div>
                                 <div class="agileits_w3layouts_event_grid1">
-                                    <h5><a href="{{ route('news_details', ['id' => $news->id]) }}">{{ $news->title }}</a></h5>
+{{--                                    <h5><a href="{{ route('news_details', ['id' => $news->id]) }}">{{ $news->title }}</a></h5>--}}
+{{--                                    --}}
                                     <p>{!! Str::words($news->description, 15) !!}</p>
                                 </div>
                             </div>
@@ -219,7 +211,6 @@
     <div class="services" id="services">
         <div class="container">
             <h3 class="w3l_header w3_agileits_header two">Our <span>SERVICES</span></h3>
-            <p class="sub_para_agile two">Ipsum dolor sit amet consectetur adipisicing elit</p>
 
             <div class="agile_inner_grids">
                 <div class="row">
@@ -399,8 +390,7 @@
     <!-- agile_testimonials -->
     <div class="test">
         <div class="container">
-            <h3 class="w3l_header w3_agileits_header">Our Recent <span>Activities</span></h3>
-            <p class="sub_para_agile two">Ipsum dolor sit amet consectetur adipisicing elit</p>
+            <h3 class="w3l_header w3_agileits_header">Recent <span>Activities</span></h3>
 
             <div class="agile_inner_grids">
                 <div class="test-gri1">
@@ -420,7 +410,7 @@
 
                                 <div class="col-md-12 test-grid1">
                                     <h4><strong>{{$activity->title}}</strong> </h4>
-                                    <date>{{date('m/d/Y h:i:s a', strtotime($activity->date))}}</date><br>
+                                    <date>{{date('m/d/Y', strtotime($activity->date))}}</date><br>
                                     {!! $activity->description !!}
 
                                 </div>

@@ -74,7 +74,7 @@
                         <div class="form-group {{ $errors->has('date') ? 'has-error' :'' }}">
                             <label class="col-sm-2 control-label">Date</label>
                             <div class='col-sm-10'>
-                                <input  id="datetimepicker1" name="date" value="{{ old('date') }}" type='text' class="form-control date" />
+                                <input   name="date" value="{{ old('date') }}" type='date' class="form-control date" />
                                 @error('date')
                                 <span class="help-block">{{ $message }}</span>
                                 @enderror
@@ -93,6 +93,7 @@
                                 @enderror
                             </div>
                         </div>
+
                     </div>
                     <!-- /.box-body -->
 

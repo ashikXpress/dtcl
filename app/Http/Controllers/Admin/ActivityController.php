@@ -54,7 +54,10 @@ class ActivityController extends Controller
         $activity->image2 = $filename2;
         $activity->image3 = $filename3;
         $activity->description = $request->description;
-        $activity->date =Carbon::parse($request->date);
+
+        //$activity->date =Carbon::parse($request->date);
+
+        $activity->date =$request->date;
         $activity->save();
 
         return redirect()->route('all.activity')->with('message', 'Our activity add successfully.');
@@ -109,7 +112,7 @@ class ActivityController extends Controller
 
 
         $activity->title = $request->title;
-        $activity->date = Carbon::parse($request->date);
+        $activity->date = $request->date;
         $activity->description = $request->description;
 
         $activity->update();

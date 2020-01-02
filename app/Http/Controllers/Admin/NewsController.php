@@ -21,10 +21,7 @@ class NewsController extends Controller
 
     public function addPost(Request $request) {
         $request->validate([
-            'title' => 'required|max:255',
             'image' => 'required|image',
-            'author' => 'required|max:191',
-            'file' => 'required|mimes:pdf',
             'upload_date' => 'required',
             'description' => 'required'
         ]);
@@ -35,17 +32,8 @@ class NewsController extends Controller
         $destinationPath = 'public/uploads/news/image';
         $file->move($destinationPath, $filename);
 
-        // Upload File
-        $file2 = $request->file('file');
-        $filename2 = Uuid::uuid1()->toString().'.'.$file2->getClientOriginalExtension();
-        $destinationPath2 = 'public/uploads/news/file';
-        $file2->move($destinationPath2, $filename2);
-
         $news = new News();
-        $news->title = $request->title;
         $news->image = $filename;
-        $news->author = $request->author;
-        $news->filename = $filename2;
         $news->description = $request->description;
         $news->uploaded_at = $request->upload_date;
         $news->save();
@@ -59,10 +47,7 @@ class NewsController extends Controller
 
     public function editPost(News $news, Request $request) {
         $request->validate([
-            'title' => 'required|max:255',
             'image' => 'image',
-            'author' => 'required|max:191',
-            'file' => 'mimes:pdf',
             'upload_date' => 'required',
             'description' => 'required'
         ]);
@@ -78,19 +63,7 @@ class NewsController extends Controller
             $news->image = $filename;
         }
 
-        if ($request->file) {
-            //unlink('public/uploads/news/file/' . $news->filename);
 
-            $file = $request->file('file');
-            $filename = Uuid::uuid1()->toString().'.'.$file->getClientOriginalExtension();
-            $destinationPath = 'public/uploads/news/file';
-            $file->move($destinationPath, $filename);
-
-            $news->filename = $filename;
-        }
-
-        $news->title = $request->title;
-        $news->author = $request->author;
         $news->description = $request->description;
         $news->uploaded_at = $request->upload_date;
         $news->save();

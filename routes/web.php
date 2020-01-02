@@ -1,31 +1,25 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Auth::routes(['register' => false, 'reset' => false]);
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/page/{slug}', 'HomeController@page')->name('page');
+Route::get('/page/sector/{slug}', 'HomeController@sectorPage')->name('sector_page');
 Route::get('/project/{type}', 'HomeController@project')->name('project');
 Route::get('/project/details/{id}', 'HomeController@projectDetails')->name('project_details');
 Route::get('/gallery', 'HomeController@gallery')->name('gallery');
 Route::get('/clients', 'HomeController@client')->name('client');
+Route::get('/clients/project/{id}', 'HomeController@clientProject')->name('client.project');
 Route::get('/our-team', 'HomeController@ourTeam')->name('our.team');
 Route::get('/recent-activities', 'HomeController@recentActivities')->name('recent.activities');
 Route::get('/activity-details/{id}', 'HomeController@activityDetails')->name('activity.details');
 Route::get('/news', 'HomeController@news')->name('news');
+
 Route::get('/news/{id}', 'HomeController@newsDetails')->name('news_details');
+
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::post('/contact', 'HomeController@contactPost')->name('contact_post');
 

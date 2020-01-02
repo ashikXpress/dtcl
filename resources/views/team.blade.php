@@ -65,7 +65,6 @@
     <section class="ftco-section inner_main_agile_section">
         <div class="container">
             <h3 class="w3l_header w3_agileits_header">Team <span>Members</span></h3>
-            <p class="sub_para_agile two">Ipsum dolor sit amet consectetur adipisicing elit</p><br>
 
             <div class="row">
                 <div class="col-md-12 text-center">

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Model\Client;
 use App\Model\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Ramsey\Uuid\Uuid;
 
 class ProjectController extends Controller
@@ -16,7 +18,12 @@ class ProjectController extends Controller
     }
 
     public function add() {
-        return view('admin.project.add');
+
+
+        $sectors=DB::table('sub_menus')->where('menu_id', '=', '3')->orderBy('sort', 'asc')->get();
+        $clients= Client::orderBy('id','desc')->get();
+
+        return view('admin.project.add',compact('sectors','clients'));
     }
 
     public function addPost(Request $request) {
@@ -26,7 +33,9 @@ class ProjectController extends Controller
             'image' => 'required|image',
             'sector' => 'required',
             'client' => 'required',
-            'date' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'description' => 'required',
         ]);
 
         // Upload Image
@@ -40,8 +49,10 @@ class ProjectController extends Controller
         $project->title = $request->title;
         $project->sector = $request->sector;
         $project->client = $request->client;
-        $project->date = $request->date;
+        $project->start_date = $request->start_date;
+        $project->end_date = $request->end_date;
         $project->image = $filename;
+        $project->description = $request->description;
 
         $project->save();
 
@@ -50,7 +61,10 @@ class ProjectController extends Controller
     }
 
     public function edit(Project $project) {
-        return view('admin.project.edit', compact('project'));
+        $sectors=DB::table('sub_menus')->where('menu_id', '=', '3')->orderBy('sort', 'asc')->get();
+        $clients= Client::orderBy('id','desc')->get();
+
+        return view('admin.project.edit', compact('project','sectors','clients'));
     }
 
     public function editPost(Project $project, Request $request) {
@@ -60,7 +74,9 @@ class ProjectController extends Controller
             'image' => 'image',
             'sector' => 'required',
             'client' => 'required',
-            'date' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'description' => 'required',
         ]);
 
         if ($request->image) {
@@ -78,7 +94,9 @@ class ProjectController extends Controller
         $project->title = $request->title;
         $project->sector = $request->sector;
         $project->client = $request->client;
-        $project->date = $request->date;
+        $project->start_date = $request->start_date;
+        $project->end_date = $request->end_date;
+        $project->description = $request->description;
         $project->save();
 
         return redirect()->route('admin_all_project')->with('message', 'Project update successfully.');

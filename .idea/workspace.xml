@@ -2,21 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b7d3a4-30b7-42a9-84df-463d0c420103" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dtcl.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fontend/images/299087-128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fontend/images/299087-256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fontend/images/299087-64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fontend/images/logo-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fontend/images/map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fontend/images/map2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fontend/images/map3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fontend/images/organogram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/about-slider/IMG_8824-300x200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/about-slider/IMG_8835.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/about-slider/IMG_8925.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/project/IMED-300x225.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/project/IMG_20180605_140927-300x150.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/project/IMG_5485-1024x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/project/PRA-300x225.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/project/STEP-300x225.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/project/TED-1024x768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/project/Untitled-1024x576.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/project/cox-300x225.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/slider/Agriculture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/slider/Civil-Engineering.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/slider/Infrastrucre-Transport.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fontend/images/slider/Water-Resource.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/news/image/5856c46c-2c6c-11ea-9449-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/news/image/61d06386-2c6c-11ea-ac60-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/news/image/693f8598-2c6c-11ea-a982-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/project/218f3dc4-2c80-11ea-975a-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/project/4edeabfc-2c80-11ea-ab51-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/project/53d4ada8-2c7d-11ea-a678-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/project/6cec7320-2c7d-11ea-90b2-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/project/ce0b71ea-2d47-11ea-ac45-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/slider/0be2d2a2-2c7a-11ea-8f95-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/slider/e4765f22-2c79-11ea-8f2f-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/slider/ef7f0d56-2c79-11ea-bd64-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/slider/f4eaaafc-2c79-11ea-a284-2047474f7ba0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/client_project.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/sector_page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ActivityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ActivityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_02_094351_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_02_094351_create_projects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_03_045031_create_news_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_03_045031_create_news_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/activities.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/activities.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/activity_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/activity_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/activity/add_our_activity.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/activity/add_our_activity.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/activity/edit_our_activity.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/activity/edit_our_activity.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/news/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/news/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news/all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/news/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/project/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/project/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/project/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/project/all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/project/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/project/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/gallery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/gallery.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/project.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/project.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/team.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +254,10 @@
       <workItem from="1577076175731" duration="1310000" />
       <workItem from="1577091030868" duration="9687000" />
       <workItem from="1577158100210" duration="92000" />
-      <workItem from="1577158216623" duration="9083000" />
+      <workItem from="1577158216623" duration="9831000" />
+      <workItem from="1577850259573" duration="3172000" />
+      <workItem from="1577862385436" duration="11936000" />
+      <workItem from="1577935817077" duration="12691000" />
     </task>
     <servers />
   </component>
@@ -227,10 +276,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1577158204390" />
-    <state x="516" y="143" key="NewPhpFileDialog" timestamp="1576651685562">
+    <state x="516" y="143" key="NewPhpFileDialog" timestamp="1577964088016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="516" y="143" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1576651685562" />
+    <state x="516" y="143" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1577964088016" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1576380017442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -243,10 +292,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="369" y="85" width="627" height="558" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1577076317307" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1576408793616">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1577943206429">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1576408793616" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1577943206429" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

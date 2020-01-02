@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('additionalCSS')
+    <style>
+        .agileits_w3layouts_event_grid1 {
+            margin-bottom: 15px;
+        }
+    </style>
+    @endsection
+
 @section('content')
     <div class="banner1">
 
@@ -10,14 +18,17 @@
     <!-- /blog -->
     <div class="events">
         <div class="container">
-            <h3 class="w3l_header w3_agileits_header">Our <span>News</span></h3>
-            <p class="sub_para_agile two">Ipsum dolor sit amet consectetur adipisicing elit</p><br>
-            <ul id="flexiselDemo1">
-                @foreach($newses as $news)
-                    <li>
+            <h3 class="w3l_header w3_agileits_header">Recent <span>News</span></h3><br>
+
+            <ul class="row">
+                @foreach($newses->chunk(3) as $row)
+                    <div class="row">
+                @foreach($row as $news)
+                    <li class="col-md-4">
                         <div class="w3layouts_event_grid">
                             <div class="w3_agile_event_grid1">
-                                <img src="{{asset('fontend/images/1.jpg')}}" alt=" " class="img-responsive" />
+                                <img src="{{asset('uploads/news/image/'.$news->image)}}" alt=" " class="img-responsive" />
+
                                 <div class="w3_agile_event_grid1_pos">
                                     <p>
                                         {{ date("d F Y", strtotime($news->uploaded_at)) }}
@@ -33,8 +44,11 @@
                         </div>
                     </li>
                 @endforeach
+                    </div>
+                    @endforeach
 
             </ul>
+            {{$newses->links()}}
 
         </div>
 

@@ -18,17 +18,19 @@
                 <div class="box-body table-responsive">
                     <table class="table table-bordered">
                         <tr>
+                            <th>Sl</th>
                             <th>Image</th>
                             <th>Type</th>
-                            <th>Title</th>
+                            <th width="30%">Title</th>
                             <th>Sector</th>
                             <th>Client</th>
-                            <th>Date</th>
+                            <th>Period</th>
                             <th>Action</th>
                         </tr>
 
                         @foreach($projects as $project)
                             <tr>
+                                <td>{{ $loop->iteration }}</td>
                                 <td>
                                     <img src="{{ asset('uploads/project/'.$project->image) }}" height="50px">
                                 </td>
@@ -37,7 +39,8 @@
                                 <td>{{ $project->title }}</td>
                                 <td>{{ $project->sector }}</td>
                                 <td>{{ $project->client }}</td>
-                                <td>{{ $project->date }}</td>
+                                <td>{{ date('d/m/y',strtotime($project->start_date)).' - '.date('d/m/y',strtotime($project->end_date))}}</td>
+
                                 <td>
                                     <a href="{{ route('edit_project', ['project' => $project->id]) }}">Edit</a> |
                                     <a role="button" class="text-red btnDelete" data-id="{{ $project->id }}">Delete</a>

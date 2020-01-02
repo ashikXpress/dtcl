@@ -5,6 +5,33 @@
         #map {
             height: 400px;
         }
+
+        section.liason-office {
+            background: #ddd;
+            padding: 45px 0;
+        }
+
+        .liason-office-text {
+            padding: 10px 0;
+        }
+
+        .liason-office-text h2 {
+            font-weight: bold;
+            font-size: 21px;
+            margin: 0 0 10px 0;
+        }
+
+
+
+        .liason-office-text p {
+            font-size: 17px;
+        }
+
+        h1.liasont-header-text {
+            font-weight: bold;
+            font-size: 31px;
+            margin-bottom: 10px;
+        }
     </style>
 @stop
 
@@ -23,7 +50,7 @@
         <div class="container">
 
             <h3 class="w3l_header w3_agileits_header"> Leave a <span>Message</span></h3>
-            <p class="sub_para_agile">Ipsum dolor sit amet consectetur adipisicing elit</p>
+
             <div class="sub_para_agile two">
             @if(Session::has('message'))
                 <div class="alert alert-success alert-dismissible">
@@ -69,7 +96,42 @@
             </div>
         </div>
     </div>
-
+    <section class="liason-office">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="liasont-header-text text-center">LIASON OFFICES</h1>
+                </div>
+                <div class="col-sm-4">
+                    <div class="liason-office-text">
+                        <h2>New Zealand</h2>
+                        <p><strong>Addres:</strong> <span>17 Bruce Street, PO Box 21, Hunterville, New Zealand </span></p>
+                        <p><strong>Phone:</strong> <span>+88029856438-9, +6463228773</span></p>
+                        <p><strong>Fax:</strong> <span>+6463228743</span></p>
+                        <p><strong>Email:</strong> <span>info@dtcltd.org, rdl@iconz.co.nz</span></p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="liason-office-text">
+                        <h2>South Africa</h2>
+                        <p><strong>Addres:</strong> <span>Unit:31, Cambridge Office Park, Centurion</span></p>
+                        <p><strong>Phone:</strong> <span>+88029856438-9, +27126651085</span></p>
+                        <p><strong>Fax:</strong> <span>+27865662241</span></p>
+                        <p><strong>Email:</strong> <span>info@dtcltd.org, bevd@epcmconsultants.co.za</span></p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="liason-office-text">
+                        <h2>Nepal</h2>
+                        <p><strong>Addres:</strong> <span>87 Nachaghar Galli, Kantipath 3317 Kathmandu, Nepal</span></p>
+                        <p><strong>Phone:</strong> <span>+88029856438-9, +977-4229186</span></p>
+                        <p><strong>Fax:</strong> <span>977-1-422-9185</span></p>
+                        <p><strong>Email:</strong> <span>info@dtcltd.org, info@devtec.com.np</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="ftco-section ftco-no-pb ftco-no-pt">
         <div class="px-0">

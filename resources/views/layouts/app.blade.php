@@ -55,7 +55,10 @@
             border: 10px solid red;
             background-color: green;
         }
+        .navbar-default .navbar-nav > li > a, .dropdown-menu > li > a {
+            padding-right: 17px;
 
+        }
     </style>
     @yield('additionalCSS')
 
@@ -197,7 +200,7 @@
             </ul>
         </div>
         <div class="agileinfo_copyright">
-            <p>&#169;Copy Right DTCL 2019-{{date('Y')}} | Design & Developed by  <a target="_blank" href="http://2aitbd.com/">2A IT</a></p>
+            <p>&#169;{{date('Y')}} DTCL. All Rights Reserved | Design & Developed by  <a target="_blank" href="http://2aitbd.com/">2A IT</a></p>
         </div>
     </div>
 </div>

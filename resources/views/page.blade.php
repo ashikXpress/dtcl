@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('additionalCSS')
+    <style>
+        .container {
+            text-align: justify;
+        }
+    </style>
+@endsection
 @section('content')
     <div class="banner1">
 
